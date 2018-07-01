@@ -1,0 +1,7 @@
+{
+    "/toyrobot/*": {
+        "target" : "http://localhost:8080/",
+        "secret" : "false",
+        "logLevel": "debug"
+    }
+}
