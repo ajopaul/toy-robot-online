@@ -24,8 +24,8 @@ public class ToyRobot {
     private int base = 0;
 
     public ToyRobot() {
-        this.x = 1;
-        this.y = 1;
+        this.x = 0;
+        this.y = 0;
         this.direction = DIRECTION.NORTH;
     }
 
@@ -58,7 +58,7 @@ public class ToyRobot {
                 break;
             case SOUTH:y = y > base ? y-1:y;
                 break;
-            case WEST:x = x > base ? x-1:y;
+            case WEST:x = x > base ? x-1:x;
                 break;
             case EAST:x = x < (boundary -1) ? x+1:x;
                 break;

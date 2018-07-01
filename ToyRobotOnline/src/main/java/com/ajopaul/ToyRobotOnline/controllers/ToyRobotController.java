@@ -46,7 +46,6 @@ public class ToyRobotController {
 
     @GetMapping("/report")
     public ResponseEntity<ToyRobot> report(){
-        System.out.println(toyRobot);
         return ResponseEntity.ok().body(toyRobot);
     }
 }
