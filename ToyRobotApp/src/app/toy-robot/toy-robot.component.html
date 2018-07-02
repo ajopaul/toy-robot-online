@@ -1,7 +1,20 @@
   <!-- Test {{toyRobot.x}},{{toyRobot.y}},{{toyRobot.direction}} -->
   <h3>Toy Robot</h3>
+  <br/>
   <div class="row">
-    <div class="col-sm-2">
+      <div class="col-4">
+          <button type="button" class="btn btn-primary" (click)="onMove()">Move Toy</button>
+      </div>
+      <div class=" col-4">
+          <button type="button" class="btn btn-primary" (click)="onLeft()">Turn Left</button>
+      </div>
+      <div class="col-4">
+          <button type="button" class="btn btn-primary" (click)="onRight()">Turn Right</button>
+      </div>
+    </div>
+  <br/>
+  <div class="row">
+    <div class="col-sm-2 col-xs-3">
       <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">X</span>
@@ -9,7 +22,7 @@
           <input type="text"  [(ngModel)]="toyRobot.x" class="form-control" (change)="updateToyRobot()">
         </div>
       </div>
-      <div class="col-sm-2">
+      <div class="col-sm-2 col-xs-3">
           <div class="input-group">
               <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1">Y</span>
@@ -29,16 +42,6 @@
           </div>
   </div>
   <br/>
-  <div class="row">
-    <div class="col-sm-2">
-        <button type="button" class="btn btn-primary" (click)="onMove()">Move Toy</button>
-    </div>
-    <div class="col-sm-2">
-        <button type="button" class="btn btn-primary" (click)="onLeft()">Turn Left</button>
-    </div>
-    <div class="col-sm-2">
-        <button type="button" class="btn btn-primary" (click)="onRight()">Turn Right</button>
-    </div>
-  </div>
+  
   
     
