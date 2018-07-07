@@ -1,6 +1,6 @@
-package com.ajopaul.ToyRobotOnline.factory;
+package com.ajopaul.toyrobot.factory;
 
-import com.ajopaul.ToyRobotOnline.model.ToyRobot;
+import com.ajopaul.toyrobot.model.ToyRobot;
 
 /**
  * Created by ajopaul on 30/6/18.

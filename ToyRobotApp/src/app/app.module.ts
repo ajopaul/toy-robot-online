@@ -6,11 +6,13 @@ import { ToyRobotComponent } from './toy-robot/toy-robot.component';
 import { ToyRobotService } from './services/toy-robot.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToyRobotComponent
+    ToyRobotComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

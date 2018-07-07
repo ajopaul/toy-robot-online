@@ -1,9 +1,14 @@
-package com.ajopaul.ToyRobotOnline.controllers;
+package com.ajopaul.toyrobot.controllers;
 
-import com.ajopaul.ToyRobotOnline.factory.ToyRobotInstance;
-import com.ajopaul.ToyRobotOnline.model.ToyRobot;
+import com.ajopaul.toyrobot.model.ToyRobot;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+//import com.ajopaul.toyrobot.model.ToyRobot;
 
 /**
  * Created by ajopaul on 30/6/18.
@@ -12,7 +17,8 @@ import org.springframework.web.bind.annotation.*;
 //@RequestMapping("/api")
 public class ToyRobotController {
 
-    ToyRobot toyRobot = ToyRobotInstance.getInstance();
+    @Autowired
+    private ToyRobot toyRobot;
 
     @PostMapping("/place")
     public ResponseEntity<ToyRobot> place(@RequestBody PlaceCommand placeCommand) throws Exception {

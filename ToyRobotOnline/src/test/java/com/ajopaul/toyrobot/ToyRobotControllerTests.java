@@ -1,6 +1,6 @@
-package com.ajopaul.ToyRobotOnline;
+package com.ajopaul.toyrobot;
 
-import com.ajopaul.ToyRobotOnline.controllers.ToyRobotController;
+import com.ajopaul.toyrobot.controllers.ToyRobotController;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

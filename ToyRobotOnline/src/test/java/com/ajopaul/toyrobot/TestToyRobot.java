@@ -1,6 +1,6 @@
-package com.ajopaul.ToyRobotOnline;
+package com.ajopaul.toyrobot;
 
-import com.ajopaul.ToyRobotOnline.model.ToyRobot;
+import com.ajopaul.toyrobot.model.ToyRobot;
 import org.junit.Before;
 import org.junit.Test;
 

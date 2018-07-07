@@ -1,4 +1,4 @@
-package com.ajopaul.ToyRobotOnline;
+package com.ajopaul.toyrobot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

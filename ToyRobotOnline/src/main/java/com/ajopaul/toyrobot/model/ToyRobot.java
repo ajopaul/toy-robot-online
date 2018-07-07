@@ -1,10 +1,13 @@
-package com.ajopaul.ToyRobotOnline.model;
+package com.ajopaul.toyrobot.model;
+
+import org.springframework.stereotype.Service;
 
 /**
  * Created by ajopaul on 25/6/18.
  * ToyRobot Application to simulate toy robot moving on a square
  * table top of 5x5
  */
+@Service
 public class ToyRobot {
 
     public int getX() {
