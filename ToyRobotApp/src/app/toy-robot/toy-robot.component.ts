@@ -9,19 +9,17 @@ import { ToyRobot } from '../toyrobot';
 })
 export class ToyRobotComponent implements OnInit {
 
-  constructor(private toyRobotService:ToyRobotService) { }
+  constructor(private toyRobotService: ToyRobotService) { }
   toyRobot: ToyRobot = new ToyRobot();
-  directions:any = ["NORTH","EAST","SOUTH","WEST"];
+  directions: any = ['NORTH', 'EAST', 'SOUTH', 'WEST'];
 
   ngOnInit() {
     this.getToyRobot();
   }
 
-  getToyRobot() : void{
+  getToyRobot(): void {
     this.toyRobotService.getToyRobot().then(
-      t => {
-        this.toyRobot = t;
-      }
+      t => (this.toyRobot = t)
     );
   }
 
@@ -40,10 +38,9 @@ export class ToyRobotComponent implements OnInit {
       t => this.toyRobot = t);
   }
 
-  updateToyRobot() : void{
+  updateToyRobot(): void {
     this.toyRobotService.onPlace(this.toyRobot).then(
       t => this.toyRobot = t
     );
   }
-
 }

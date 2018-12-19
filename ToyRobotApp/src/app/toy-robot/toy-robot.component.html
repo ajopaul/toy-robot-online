@@ -1,45 +1,45 @@
-  <!-- Test {{toyRobot.x}},{{toyRobot.y}},{{toyRobot.direction}} -->
   <h3>Toy Robot</h3>
   <br/>
-  <div class="row">
-      <div class="col-4">
-          <button type="button" class="btn btn-primary" (click)="onMove()">Move Toy</button>
-      </div>
-      <div class=" col-4">
-          <button type="button" class="btn btn-primary" (click)="onLeft()">Turn Left</button>
-      </div>
-      <div class="col-4">
-          <button type="button" class="btn btn-primary" (click)="onRight()">Turn Right</button>
-      </div>
-    </div>
+  <div class="buttons-wrapper">
+          <button type="button" class="btn btn-primary toy-btn" (click)="onMove()">Move Toy</button>
+          <button type="button" class="btn btn-primary toy-btn" (click)="onLeft()">Turn Left</button>
+          <button type="button" class="btn btn-primary toy-btn" (click)="onRight()">Turn Right</button>
+  </div>
   <br/>
   <div class="row">
     <div class="col-sm-2 col-xs-3">
       <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">X</span>
-          </div>
-          <input type="text"  [(ngModel)]="toyRobot.x" class="form-control" (change)="updateToyRobot()">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">X</span>
         </div>
+        <input type="text"  [(ngModel)]="toyRobot.x" class="form-control" (change)="updateToyRobot()">
       </div>
-      <div class="col-sm-2 col-xs-3">
-          <div class="input-group">
-              <div class="input-group-prepend">
-                <span class="input-group-text" id="basic-addon1">Y</span>
-              </div>
-              <input type="text" [(ngModel)]="toyRobot.y" class="form-control" (change)="updateToyRobot()">
-            </div>
+    </div>
+    <div class="col-sm-2 col-xs-3">
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Y</span>
+        </div>
+        <input type="text" [(ngModel)]="toyRobot.y" class="form-control" (change)="updateToyRobot()">
       </div>
-          <div class="col-sm-1">
-            <label >Direction</label>
-          </div>
-          <div class="col-sm-3">
-              <select class="form-control" [(ngModel)]="toyRobot.direction" (change)="updateToyRobot()">
-                  <option *ngFor="let d of directions" [ngValue]="d">
-                    {{ d }}
-                  </option>
-                </select>
-          </div>
+    </div>
+    <div class="col-sm-1">
+      <label >Direction</label>
+    </div>
+    <div class="col-sm-3">
+      <select class="form-control" [(ngModel)]="toyRobot.direction" (change)="updateToyRobot()">
+        <option *ngFor="let d of directions" [ngValue]="d">
+          {{ d }}
+        </option>
+      </select>
+    </div>
+  </div>
+  <div class="toy-table-wrapper">
+    <table class="table responsive-table">
+      <tr *ngFor="let y of [4,3,2,1,0]">
+        <td *ngFor="let x of [0,1,2,3,4]"><span [ngClass]="{active: (toyRobot.x == x && toyRobot.y == y)}">0</span></td>
+      </tr>
+    </table>
   </div>
   <br/>
   

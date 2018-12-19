@@ -1,0 +1,38 @@
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+
+.toy-btn {
+  margin-top: 10px;
+  width: 150px;
+}
+
+table , tr, td {
+  margin: 30px;
+  border: 2px solid;
+}
+
+td {
+  width: 100px;
+  height: 50px;
+}
+
+table {
+  width: 300px;
+}
+
+span {
+  display: none;
+}
+
+.active {
+  display: flex;
+  justify-content: center;
+}
+
+.inactive {
+  display: none;
+}
